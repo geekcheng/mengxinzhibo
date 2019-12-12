@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_centerVertical="true"
+        android:scaleType="center" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/icon"
+        android:scaleType="centerCrop"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/avatar"
+        android:layout_toRightOf="@id/avatar"
+        android:ellipsize="end"
+        android:maxWidth="100dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor3"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/sex"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/name" />
+
+    <ImageView
+        android:id="@+id/level"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/sex"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/sex" />
+
+    <ImageView
+        android:id="@+id/level_anchor"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/level"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/level" />
+
+    <TextView
+        android:id="@+id/votes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/avatar"
+        android:layout_toRightOf="@id/avatar"
+        android:textColor="@color/textColorC"
+        android:textSize="13sp" />
+
+
+</RelativeLayout>

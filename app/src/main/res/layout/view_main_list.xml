@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/icon_shouyi_bg">
+
+    <FrameLayout
+        android:id="@+id/layoutListTop"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <!--<com.tongchuang.phonelive.custom.RatioImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@mipmap/bg_list"-->
+        <!--app:ri_ratio="0.973" />-->
+
+        <com.tongchuang.phonelive.custom.ViewPagerIndicator
+            android:id="@+id/indicator"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="50dp"
+            app:bold="true"
+            app:change_size="true"
+            app:currentItem="0"
+            app:indicatorColor="@color/white"
+            app:indicatorHeight="3dp"
+            app:indicatorWidth="22dp"
+            app:lightColor="@color/white"
+            app:normalColor="#ccffffff"
+            app:title_textSize="18sp"
+            app:visibleItemCount="2" />
+
+        <com.tongchuang.phonelive.custom.MyLinearLayout1
+            android:id="@+id/radio_group_wrap"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal">
+
+            <com.tongchuang.phonelive.custom.MyFrameLayout1
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btn_pro_day"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/bg_list_btn"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/main_list_day"
+                        android:textColor="@color/bg_list_btn_txt_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/btn_pro_week"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bg_list_btn"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/main_list_week"
+                        android:textColor="@color/bg_list_btn_txt_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/btn_pro_month"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bg_list_btn"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/main_list_month"
+                        android:textColor="@color/bg_list_btn_txt_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/btn_pro_all"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bg_list_btn"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/main_list_all"
+                        android:textColor="@color/bg_list_btn_txt_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+            </com.tongchuang.phonelive.custom.MyFrameLayout1>
+
+            <com.tongchuang.phonelive.custom.MyFrameLayout1
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btn_con_day"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/bg_list_btn"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/main_list_day"
+                        android:textColor="@color/bg_list_btn_txt_color_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/btn_con_week"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bg_list_btn"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/main_list_week"
+                        android:textColor="@color/bg_list_btn_txt_color_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/btn_con_month"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bg_list_btn"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/main_list_month"
+                        android:textColor="@color/bg_list_btn_txt_color_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/btn_con_all"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bg_list_btn"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/main_list_all"
+                        android:textColor="@color/bg_list_btn_txt_color_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+            </com.tongchuang.phonelive.custom.MyFrameLayout1>
+
+        </com.tongchuang.phonelive.custom.MyLinearLayout1>
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutListTop"
+        android:layout_marginBottom="10dp"
+        android:overScrollMode="never" />
+</RelativeLayout>

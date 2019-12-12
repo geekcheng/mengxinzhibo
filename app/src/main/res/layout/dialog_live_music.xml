@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="360dp"
+    android:background="@drawable/bg_dialog_2"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_dialog_music_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_search_input"
+            android:drawableLeft="@mipmap/icon_music_search"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="@string/music_search"
+            android:imeActionLabel="@string/search"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="17dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/textColor3"
+            android:textColorHint="@color/textColorC"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_music_close" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_local_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/music_no_local_music"
+        android:textColor="@color/textColorC"
+        android:textSize="15sp"
+        android:visibility="invisible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top" />
+
+
+</RelativeLayout>

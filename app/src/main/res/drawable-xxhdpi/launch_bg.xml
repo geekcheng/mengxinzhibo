@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="#ffffff" />
+    </item>
+
+    <!-- 顶部 -->
+    <item>
+        <bitmap
+            android:gravity="top|center_horizontal"
+            android:scaleType="center"
+            android:src="@mipmap/screen" />
+    </item>
+
+    <!-- 底部 -->
+    <item android:bottom="65dp">
+        <bitmap
+            android:gravity="bottom|center_horizontal"
+            android:scaleType="center"
+            android:src="@mipmap/screen_txt" />
+    </item>
+
+</layer-list>

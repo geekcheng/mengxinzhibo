@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        />
+
+    <View
+        android:id="@+id/video_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        />
+
+    <ImageView
+        android:id="@+id/btn_play"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/icon_video_play"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutTrendShare"
+    android:layout_width="86dp"
+    android:layout_height="96dp"
+    android:background="@mipmap/icon_share_bg_upward"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/trend_share_title"
+        android:textColor="#ff666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvTrendShareQQ"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_marginTop="1dp"
+        android:drawableLeft="@mipmap/icon_share_qq"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="@string/trend_share_qq"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#eeeeee"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvTrendShareWeixin"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_marginTop="13dp"
+        android:drawableLeft="@mipmap/icon_share_weixin"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="@string/trend_share_weixin"
+        android:textColor="#ff666666"
+        android:textSize="12sp" />
+</LinearLayout>

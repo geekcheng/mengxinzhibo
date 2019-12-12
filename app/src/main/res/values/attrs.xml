@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RefreshLayout">
+        <attr name="loadMoreEnable" format="boolean" />
+        <attr name="refreshEnable" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="RefreshView">
+        <attr name="enableLoadMore" format="boolean" />
+        <attr name="enableRefresh" format="boolean" />
+        <attr name="showNoData" format="boolean" />
+        <attr name="showLoading" format="boolean" />
+        <attr name="layout" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="MyViewPager">
+        <attr name="canScroll" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="TabButton">
+        <attr name="tbn_selected_icon" format="reference" />
+        <attr name="tbn_unselected_icon" format="reference" />
+        <attr name="tbn_tip" format="string" />
+        <attr name="tbn_icon_size" format="dimension" />
+        <attr name="tbn_text_size" format="dimension" />
+        <attr name="tbn_text_color_select" format="color" />
+        <attr name="tbn_text_color_un_select" format="color" />
+        <attr name="tbn_checked" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="title_textSize" format="dimension" />
+        <attr name="indicatorWidth" format="dimension" />
+        <attr name="indicatorHeight" format="dimension" />
+        <attr name="indicatorBottomMargin" format="dimension" />
+        <attr name="normalColor" format="color" />
+        <attr name="lightColor" format="color" />
+        <attr name="indicatorColor" format="color" />
+        <attr name="currentItem" format="integer" />
+        <attr name="change_color" format="boolean" />
+        <attr name="change_size" format="boolean" />
+        <attr name="bold" format="boolean" />
+        <attr name="visibleItemCount" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="MyLinearLayout2">
+        <attr name="mll_span_count" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="RatioImageView">
+        <attr name="ri_ratio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="MyFrameLayout2">
+        <attr name="mfl_ratio" format="float" />
+        <attr name="mfl_offestY" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="MyRelativeLayout1">
+        <attr name="mrl_radius" format="dimension" />
+        <attr name="mrl_inner_r" format="dimension" />
+        <attr name="mrl_inner_w" format="dimension" />
+        <attr name="mrl_inner_h" format="dimension" />
+        <attr name="mrl_inner_x" format="dimension" />
+        <attr name="mrl_inner_y" format="dimension" />
+        <attr name="mrl_line_m" format="dimension" />
+        <attr name="mrl_line_mt" format="dimension" />
+        <attr name="mrl_line_h" format="dimension" />
+        <attr name="mrl_bg_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="MyRelativeLayout2">
+        <attr name="mrl_ratio" format="float" />
+        <attr name="mrl_scaleX" format="float" />
+    </declare-styleable>
+    <declare-styleable name="DrawableTextView">
+        <attr name="dt_top_width" format="dimension" />
+        <attr name="dt_top_height" format="dimension" />
+        <attr name="dt_left_width" format="dimension" />
+        <attr name="dt_left_height" format="dimension" />
+        <attr name="dt_right_width" format="dimension" />
+        <attr name="dt_right_height" format="dimension" />
+        <attr name="dt_bottom_width" format="dimension" />
+        <attr name="dt_bottom_height" format="dimension" />
+        <attr name="dt_top_drawable" format="reference" />
+        <attr name="dt_left_drawable" format="reference" />
+        <attr name="dt_right_drawable" format="reference" />
+        <attr name="dt_bottom_drawable" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="GiftMarkView">
+        <attr name="gm_icon_res_1" format="reference" />
+        <attr name="gm_icon_res_2" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="MyTextView">
+        <attr name="mt_radius" format="dimension" />
+        <attr name="mt_checked" format="boolean" />
+        <attr name="mt_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ProgressTextView">
+        <attr name="ptv_start_text" format="string" />
+        <attr name="ptv_end_text" format="string" />
+        <attr name="ptv_bg_color" format="color" />
+        <attr name="ptv_line_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ProgressTextView2">
+        <attr name="ptv2_bg_color" format="color" />
+        <attr name="ptv2_fg_color" format="color" />
+        <attr name="ptv2_stroke_width" format="dimension" />
+        <attr name="ptv2_progress" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="LrcTextView">
+        <attr name="ltv_progress" format="float" />
+        <attr name="ltv_progressColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="BubbleLayout">
+        <attr name="bubbleBgColor" format="color" />
+        <attr name="bubbleRadius" format="dimension" />
+        <attr name="arrowWidth" format="dimension" />
+        <attr name="arrowHeight" format="dimension" />
+        <attr name="arrowPositionY" format="dimension" />
+        <attr name="arrowDirecrion" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MyFrameLayout3">
+        <attr name="mfl3_ratio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="ChatVoiceLayout">
+        <attr name="cvl_duration" format="integer" />
+        <attr name="cvl_direction" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="FrameImageView">
+        <attr name="fiv_ratio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="PkProgressBar">
+        <attr name="ppb_minWidth" format="dimension" />
+        <attr name="ppb_rate" format="float" />
+        <attr name="ppb_left_color" format="color" />
+        <attr name="ppb_right_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="LoadingBar">
+        <attr name="lb_bg_color" format="color" />
+        <attr name="lb_fg_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="MyLinearLayout3">
+        <attr name="mll_height_percent" format="float" />
+    </declare-styleable>
+    <declare-styleable name="VideoRecordBtnView">
+        <attr name="vrb_max_width" format="dimension" />
+        <attr name="vrb_min_width" format="dimension" />
+        <attr name="vrb_start_width" format="dimension" />
+        <attr name="vrb_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="MyLinearLayout4">
+        <attr name="mll4_count" format="float" />
+    </declare-styleable>
+</resources>

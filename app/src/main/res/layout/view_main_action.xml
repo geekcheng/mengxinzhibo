@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/layoutTrendTitle"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/bg_title">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="30dp"
+                android:text="@string/main_list"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </FrameLayout>
+
+        <com.tongchuang.phonelive.custom.RefreshView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/refreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:enableLoadMore="true"
+            app:enableRefresh="true" />
+    </LinearLayout>
+</FrameLayout>

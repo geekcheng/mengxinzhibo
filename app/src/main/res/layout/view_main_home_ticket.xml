@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fadingEdge="none"
+        app:elevation="0dp"
+        app:layout_behavior="com.tongchuang.phonelive.custom.FixAppBarLayoutBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <FrameLayout
+                android:id="@+id/top_container"
+                android:layout_width="match_parent"
+                android:layout_height="70dp" />
+
+            <View style="@style/line2" />
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.tongchuang.phonelive.custom.MyFrameLayout1
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/yellow2">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/btn_ticket_sell"
+                android:layout_width="60dp"
+                android:layout_height="26dp"
+                android:background="@drawable/bg_list_btn"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/ticket_sell"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/btn_ticket_history"
+                android:layout_width="60dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_list_btn"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/ticket_history"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+    </com.tongchuang.phonelive.custom.MyFrameLayout1>
+
+    <FrameLayout
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp" />
+
+
+</LinearLayout>

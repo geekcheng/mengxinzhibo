@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textColor3">
+
+    <FrameLayout
+        android:id="@+id/video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            app:riv_border_color="#fff"
+            app:riv_border_width="1dp"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:id="@+id/btn_follow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="3dp"
+            android:translationY="-15dp" />
+
+        <ImageView
+            android:id="@+id/btn_like"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:translationY="-6dp" />
+
+        <TextView
+            android:id="@+id/like_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            android:translationY="-10dp" />
+
+        <ImageView
+            android:id="@+id/btn_comment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="7dp"
+            android:src="@mipmap/icon_video_comment"
+            android:translationY="-6dp" />
+
+        <TextView
+            android:id="@+id/comment_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            android:translationY="-10dp" />
+
+        <ImageView
+            android:id="@+id/btn_share"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="7dp"
+            android:src="@mipmap/icon_video_share"
+            android:translationY="-6dp" />
+
+        <TextView
+            android:id="@+id/share_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            android:translationY="-10dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="60dp"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="3dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

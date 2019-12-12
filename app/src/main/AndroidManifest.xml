@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tongchuang.phonelive">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.NETWORK_PROVIDER" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--接三方的时候,修改这里的包名-->
+    <permission
+        android:name="${JPush}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!--接三方的时候,修改这里的包名-->
+    <uses-permission android:name="${JPush}.permission.JPUSH_MESSAGE" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name=".AppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_live"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="label">
+        <activity
+            android:name=".activity.LauncherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 手机号登录 -->
+        <activity
+            android:name=".activity.PhoneLoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 手机号注册 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".activity.FindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <!-- 编辑资料 -->
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <!-- 更改性别 -->
+        <activity
+            android:name=".activity.EditSexActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改昵称 -->
+        <activity
+            android:name=".activity.EditNameActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改签名 -->
+        <activity
+            android:name=".activity.EditSignActivity"
+            android:screenOrientation="portrait" />
+        <!-- 关注 -->
+        <activity
+            android:name=".activity.FollowActivity"
+            android:screenOrientation="portrait" />
+        <!-- 粉丝 -->
+        <activity
+            android:name=".activity.FansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveRecordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置 -->
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改密码 -->
+        <activity
+            android:name=".activity.ModifyPwdActivity"
+            android:screenOrientation="portrait" />
+        <!-- 立即直播 -->
+        <activity
+            android:name=".activity.LiveAnchorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <!-- 观看直播 -->
+        <activity
+            android:name=".activity.LiveAudienceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.LiveChooseClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveAddImpressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyImpressActivity"
+            android:screenOrientation="portrait" />
+        <!-- 个人资料 -->
+        <activity
+            android:name=".activity.UserHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveContributeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的收益 -->
+        <activity
+            android:name=".activity.MyProfitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CashActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的账户 -->
+        <activity
+            android:name=".activity.MyCoinActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息 -->
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChatRoomActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 搜索 -->
+        <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveRecordPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginInvalidActivity"
+            android:theme="@style/dialog2" />
+        <!-- 为你推荐 -->
+        <activity
+            android:name=".activity.RecommendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChatChooseImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LiveGuardListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 系统消息 -->
+        <activity
+            android:name=".activity.SystemMessageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 视频播放 -->
+        <activity
+            android:name=".activity.VideoPlayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <!-- 视频拍摄 -->
+        <activity
+            android:name=".activity.VideoRecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.VideoEditActivity"
+            android:screenOrientation="portrait" />
+        <!-- 发布 -->
+        <activity
+            android:name=".activity.VideoPublishActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!-- 视频选择 -->
+        <activity
+            android:name=".activity.VideoChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VideoReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.MyVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ErrorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyTicketActivity"
+            android:screenOrientation="portrait" />
+        <!-- 活动详情 -->
+        <activity
+            android:name=".activity.BuyTicketActivity"
+            android:screenOrientation="portrait" />
+        <!-- 相册 -->
+        <activity
+            android:name=".activity.PictureChooseActivity"
+            android:screenOrientation="portrait" />
+        <!-- 动态 -->
+        <activity
+            android:name=".activity.TrendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <!-- 视频 -->
+        <activity
+            android:name=".activity.VideoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <!-- 活动中心 -->
+        <activity
+            android:name=".activity.ActionCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 在线推广 -->
+        <activity
+            android:name=".activity.OnlinePopularizeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 排行 -->
+        <activity
+            android:name=".activity.RankingActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息，花田 -->
+        <activity
+            android:name=".activity.MainActionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改位置 -->
+        <activity
+            android:name=".activity.EditCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+        <!--微信支付回调页面-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--腾讯地图定位-->
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="WCOBZ-STJ3X-VEE4J-ZMWKZ-SAYK7-EHFWY" />
+
+        <!-- 腾讯bugly -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="f5066bb6cb" />
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="${BUGLY_APP_CHANNEL}" />
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" />
+        <!-- 腾讯bugly end-->
+
+        <!--Android 7.0 拍照要用这个-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${fileprovider}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!--百度语音识别-->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="15704713" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="hqkMG3MRFfUPu6k8dbxRb0vb" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="a6n0sLt1ihDLoVpglKiUl9FYK7oX307V" />
+
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+        <!--百度语音识别end-->
+
+        <!--极光推送-->
+        <receiver
+            android:name=".im.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="${JPush}" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${JPush}" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="${JPush}" />
+            </intent-filter>
+
+        </service>
+
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <category android:name="${JPush}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="cn.jpush.im.android.helpers.IMReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="${JPush}.DataProvider"
+            android:exported="true" />
+
+        <provider
+            android:name="cn.jpush.im.android.helpers.ipc.IMProvider"
+            android:authorities="${JPush}.IMProvider"
+            android:exported="false" />
+
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="${JPush}.DownloadProvider"
+            android:exported="true" />
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!--接三方的时候,修改这里的APP_KEY-->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="549a24aa39aaba067d0c9959" />
+        <!--极光推送 end-->
+
+        <!--支付宝-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--支付宝 end-->
+
+
+        <!--友盟统计-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5bff3f04b465f52652000b1e" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL}" />
+        <!--友盟统计 end-->
+
+        <!--Android 9.0移除了apache的HttpClient，而金山sdk中用到了这个，不加这个的话在Android 9.0会崩溃-->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

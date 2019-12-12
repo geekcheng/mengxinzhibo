@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="@string/live_time_fee"
+        android:textColor="@color/textColor"
+        android:textSize="15sp"
+        />
+
+    <View
+        style="@style/line2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal"
+        >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                >
+
+                <com.tongchuang.phonelive.custom.DrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/live_choose_charge"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    app:dt_right_drawable="@mipmap/icon_arrow_right_4"
+                    app:dt_right_height="18dp"
+                    app:dt_right_width="18dp"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="70dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_btn_cancel"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/gray3"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="70dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_btn_confirm"
+                    android:gravity="center"
+                    android:text="@string/confirm"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray2"
+            />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="15dp"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

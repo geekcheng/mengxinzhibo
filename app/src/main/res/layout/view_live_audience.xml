@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/btn_link_mic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_live_link_mic"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:src="@mipmap/icon_live_link_mic" />
+
+        <TextView
+            android:id="@+id/link_mic_tip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/live_link_mic_2"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_icon_live"
+            android:scaleType="center"
+            android:src="@mipmap/icon_live_close" />
+
+        <ImageView
+            android:id="@+id/btn_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/btn_close"
+            android:background="@drawable/bg_icon_live"
+            android:scaleType="center"
+            android:src="@mipmap/icon_live_msg" />
+
+        <ImageView
+            android:id="@+id/btn_gift"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/btn_share"
+            android:background="@drawable/bg_icon_live"
+            android:scaleType="center"
+            android:src="@mipmap/icon_live_gift" />
+
+        <ImageView
+            android:id="@+id/btn_red_pack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/btn_gift"
+            android:padding="5dp"
+            android:src="@mipmap/icon_live_red_pack"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_chat"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_live_anchor_avatar"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="22dp"
+            android:singleLine="true"
+            android:text="@string/live_say_to_anchor"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/red_point"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignTop="@id/btn_share"
+            android:layout_alignRight="@id/btn_share"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_red_point"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minWidth="14dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="1"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            android:translationY="-4dp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

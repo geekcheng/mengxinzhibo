@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_video_comment"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/group_1"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:src="@mipmap/icon_video_music_back"
+                android:tint="@color/textColor"
+                />
+
+        </RelativeLayout>
+
+        <com.tongchuang.phonelive.custom.RefreshView
+            android:id="@+id/refreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:enableLoadMore="true"
+            app:enableRefresh="true"
+            />
+    </LinearLayout>
+</FrameLayout>

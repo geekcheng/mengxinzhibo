@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutWishBillItem"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/bg_wish_bill_add_item">
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/wish_add_num"
+            android:textColor="#ff999999"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/tvNum"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#ff999999"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="7dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_wish_gift_list" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvNum"
+            android:layout_marginLeft="14dp"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:id="@+id/layoutAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/icon_wish_bill_add" />
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#92EEFB">
+
+                    <TextView
+                        android:id="@+id/tvProgress"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="#08D3EF" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvDoneCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0/30"
+                    android:textColor="#08D3EF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvWishBillSendUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/layoutAvatar" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

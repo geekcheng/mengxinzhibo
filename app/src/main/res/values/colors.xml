@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/global</color>
+    <color name="colorPrimaryDark">@color/global</color>
+    <color name="colorAccent">@color/global</color>
+
+    <color name="global">#ffdd00</color>
+    <color name="background">@color/white</color>
+    <color name="transparent">#00000000</color>
+    <color name="textColor">#333333</color>
+    <color name="white">#fff</color>
+    <color name="gray1">#969696</color>
+    <color name="gray2">#f5f5f5</color>
+    <color name="gray3">#c8c8c8</color>
+    <color name="yellow">#fffa37</color>
+    <color name="yellow2">#f0cd08</color>
+    <color name="textColor2">#646464</color>
+    <color name="red">#ff0000</color>
+    <color name="pk_red">#f03a40</color>
+    <color name="pk_blue">#2a92f7</color>
+    <color name="black1">#e6323232</color>
+
+    <color name="textColor2New">#222222</color>
+    <color name="textColor3">#333333</color>
+    <color name="textColor6">#666666</color>
+    <color name="textColor9">#999999</color>
+    <color name="textColorA">#AAAAAA</color>
+    <color name="textColorB">#BBBBBB</color>
+    <color name="textColorC">#CCCCCC</color>
+    <color name="textColorD">#DDDDDD</color>
+    <color name="textColorE">#EEEEEE</color>
+    <color name="violet">#B540FF</color>
+    <color name="violetTxt">#C652EF</color>
+    <color name="textPhoneLogin">#FFFFFF</color>
+
+    <color name="color_bg_F7">#F7F7F7</color>
+
+    <color name="color_main_me_top">#9A58FF</color>
+    <color name="color_bang_1">#B540FF</color>
+    <color name="color_bang_2">#E065F0</color>
+    <color name="color_live_end_title">#CCCCCC</color>
+    <color name="color_live_end_info">#ed6aff</color>
+    <color name="color_live_end_confirm">#FFFFFF</color>
+    <color name="color_live_room_type_checked">#C466FF</color>
+    <color name="color_dialog_cancel">#B540FF</color>
+    <color name="color_shouhu_money">#B540FF</color>
+
+    <color name="main_bottom_bg">@color/white</color>
+    <color name="main_bottom_text_color_select">#333</color>
+    <color name="main_bottom_text_color_un_select">#333</color>
+</resources>

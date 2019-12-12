@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_red"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/red_pack_1"
+        android:textColor="#FFE50D"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/red_pack_2"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.tongchuang.phonelive.custom.DrawableRadioButton
+            android:id="@+id/btn_psq"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/red_pack_3"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:dt_left_drawable="@drawable/bg_red_pack_btn"
+            app:dt_left_height="13dp"
+            app:dt_left_width="13dp" />
+
+        <com.tongchuang.phonelive.custom.DrawableRadioButton
+            android:id="@+id/btn_pj"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/red_pack_4"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:dt_left_drawable="@drawable/bg_red_pack_btn"
+            app:dt_left_height="13dp"
+            app:dt_left_width="13dp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:id="@+id/group_psq"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_red_pack_edit"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/red_pack_24"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_coin_psq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:textColor="#FFE50D"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/coin_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/textColorC"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_red_pack_edit"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/count"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_count_psq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ge"
+                    android:textColor="@color/textColorC"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group_pj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_red_pack_edit"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/red_pack_23"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_coin_pj"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/global"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/coin_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray1"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_red_pack_edit"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/count"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_count_pj"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ge"
+                    android:textColor="@color/gray1"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_red_pack_edit"
+        android:gravity="top"
+        android:hint="@string/red_pack_5"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:textColor="@color/textColor3"
+        android:textColorHint="@color/textColorC"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_red_pack_check"
+        android:button="@null" />
+
+    <TextView
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_red_pack_btn_2"
+        android:gravity="center"
+        android:text="@string/red_pack_6"
+        android:textColor="#F94C2D"
+        android:textSize="16sp" />
+</LinearLayout>

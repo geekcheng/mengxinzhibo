@@ -1,0 +1,142 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    signingConfigs {
+        release {
+            keyAlias 'tongchuangyb'
+            keyPassword 'tctd123'
+            storeFile file('../tongchuangyb.jks')
+            storePassword 'tctd123'
+        }
+    }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        multiDexEnabled true
+        
+        flavorDimensions "default"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "app_name_live", "@string/app_name_release"
+        }
+        debug {
+            signingConfig signingConfigs.release
+            resValue "string", "app_name_live", "@string/app_name_debug"
+            buildConfigField 'String', 'SERVER_URL', '"http://192.168.0.16"'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'GoogleAppIndexingWarning'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        //天骄测试高配A
+        tianjiaoa {
+            //Android 7.0 拍照要用这个，java文件
+            buildConfigField("String", "fileprovider", "\"com.tctd.tianjiao.fileprovider\"")
+            applicationId "com.tctd.tianjiao"
+            versionCode 21
+            versionName "3.6.8"
+
+            //占位符
+            manifestPlaceholders = [fileprovider     : "com.tctd.tianjiao.fileprovider",//Android 7.0 拍照要用这个，manifest文件
+                                    BUGLY_APP_CHANNEL: "com.tctd.tianjiao",//腾讯bugly
+                                    JPush            : "com.tctd.tianjiao",//极光推送
+                                    UMENG_CHANNEL    : "com.tctd.tianjiao"//友盟统计
+            ]
+
+            buildConfigField 'String', 'tx_dsp_LicenseUrl', '"http://license.vod2.myqcloud.com/license/v1/2c0dd9ca85a0ed65dfa1af0a9464bcdd/TXUgcSDK.licence"'
+            buildConfigField 'String', 'tx_dsp_Key', '"2eb6b1bb4fcca406c885fa89a1513bdd"'
+
+            buildConfigField 'String', 'SERVER_URL', '"http://tjha.tongchuangtianda.vip"'
+        }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+//            outputFileName = "apk_${variant.versionCode}-${variant.versionName}-${releaseTime()}.apk"
+            outputFileName = "apk_" + variant.flavorName + "_${releaseTime()}.apk"
+        }
+    }
+}
+
+def static releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+repositories {
+    flatDir {
+        dirs 'libs', '../libs'
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //萌颜
+    api project(':beauty')
+    //鑫颜
+    api project(':tiui')
+    //游戏
+    api project(':game')
+    //短视频
+    api project(':video')
+    //公共包
+    api project(':fire')
+    //socket.io
+    api('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    //gif库，播放礼物gif用
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+    //腾讯短视频sdk
+    api(name: 'LiteAVSDK_Professional_6.3.7089', ext: 'aar')
+    //exoplayer
+    api group: 'com.google.android.exoplayer', name: 'exoplayer', version: '2.8.4'
+    //腾讯bugly
+    api 'com.tencent.bugly:crashreport:2.6.6'
+    //腾讯定位，地图sdk
+    api files('libs/TencentLocationSdk_v6.2.5.3.jar')
+    api files('libs/TencentMapSDK_1.2.8.1.jar')
+    //腾讯云存储
+    api 'com.tencent.qcloud:cosxml:5.4.13'
+    //七牛云存储
+    api 'com.qiniu:qiniu-android-sdk:7.2.1'
+    //百度语音识别
+    api files('libs/bdasr_3.0.8.2.jar')
+    //微信sdk,支付登录分享
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6'
+    //支付宝sdk
+    api files('libs/alipaySdk-20180601.jar')
+    //友盟统计
+    api 'com.umeng.sdk:common:1.5.3'
+    //banner
+    api 'com.bigkoo:convenientbanner:2.0.5'
+    //时间选择器
+    api 'com.contrarywind:Android-PickerView:4.1.8'
+    //ButterKnife
+    api 'com.jakewharton:butterknife:9.0.0-rc1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+}

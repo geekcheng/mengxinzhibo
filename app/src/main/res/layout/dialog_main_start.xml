@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="18dp"
+    android:paddingBottom="28dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_main_start_live"
+            android:drawablePadding="4dp"
+            android:gravity="center_horizontal"
+            android:text="@string/main_start_live"
+            android:textColor="@color/textColor"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/btn_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:drawableTop="@mipmap/icon_main_start_video"
+            android:drawablePadding="4dp"
+            android:gravity="center_horizontal"
+            android:text="@string/main_start_video"
+            android:textColor="@color/textColor"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:padding="15dp"
+        android:src="@mipmap/icon_main_start_close"
+        android:visibility="gone" />
+</LinearLayout>

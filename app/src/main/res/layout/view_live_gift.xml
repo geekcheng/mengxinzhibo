@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clipChildren="false"
+    >
+
+    <RelativeLayout
+        android:id="@+id/group_1"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:translationX="-400dp"
+        >
+
+        <com.tongchuang.phonelive.custom.RatioImageView
+            android:layout_width="240dp"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/icon_live_gift_anim_1"
+            app:ri_ratio="0.132"
+            />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.6dp"
+            android:layout_marginLeft="1.4dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"
+            android:src="@mipmap/icon_test"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatar"
+            android:layout_marginTop="-2dp"
+            android:layout_toRightOf="@id/avatar"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/avatar"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:translationY="1dp"
+            />
+
+        <ImageView
+            android:id="@+id/gift_icon"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            />
+    </RelativeLayout>
+
+    <com.tongchuang.phonelive.custom.MyFrameLayout2
+        android:id="@+id/group_2"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_alignRight="@id/group_1"
+        android:background="@mipmap/icon_live_gift_anim_2"
+        app:mfl_ratio="0.628"
+        android:layout_alignParentBottom="true"
+        android:translationX="400dp"
+        >
+
+        <TextView
+            android:id="@+id/gift_count"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingLeft="22dp"
+            android:singleLine="true"
+            />
+
+
+    </com.tongchuang.phonelive.custom.MyFrameLayout2>
+</RelativeLayout>

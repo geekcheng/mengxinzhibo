@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="228dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="12dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/icon_guard_top_1" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/textColor3"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="15dp">
+
+        <ImageView
+            android:id="@+id/level_anchor"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/level"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp" />
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/textColor9"
+        android:textSize="13sp" />
+
+    <View style="@style/line2" />
+</LinearLayout>

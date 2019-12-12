@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_dialog"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:translationY="-30dp">
+
+        <TextView
+            android:id="@+id/tvBuyConfirmTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/ticket_buy_confirm_title"
+            android:textColor="@color/textColor"
+            android:textSize="15sp" />
+
+        <View style="@style/line2" />
+
+        <TextView
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/global"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

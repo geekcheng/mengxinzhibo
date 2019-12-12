@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tongchuang.phonelive.custom.TicketListItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivAvatarThumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="5dp" />
+
+    <com.tongchuang.phonelive.custom.RatioRoundImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_main_item_bottom"
+        app:ri_ratio="0.25"
+        app:riv_corner_radius_bottom_left="5dp"
+        app:riv_corner_radius_bottom_right="5dp" />
+
+    <TextView
+        android:id="@+id/tvTimeStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="6dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvTimeStart"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvName"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+</com.tongchuang.phonelive.custom.TicketListItemLayout>

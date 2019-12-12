@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+86"
+            android:textColor="#222222"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="11dp"
+            android:background="@null"
+            android:hint="@string/reg_input_phone"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColorB"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/line2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <EditText
+            android:id="@+id/edit_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/reg_input_code"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColorB"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btn_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:onClick="registerClick"
+            android:text="@string/reg_get_code"
+            android:textColor="@color/reg_btn_code"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/line2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="@string/reg_input_pwd_1_info"
+            android:textColor="@color/textColorC"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edit_pwd_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/reg_input_pwd_1"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColorB"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/line2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/login_btn"
+        android:enabled="false"
+        android:gravity="center"
+        android:onClick="registerClick"
+        android:text="@string/reg_register_and_login"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        android:background="@color/gray2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_video_comment_input"
+            android:gravity="center_vertical"
+            android:hint="@string/video_say_something"
+            android:imeActionLabel="@string/send"
+            android:imeOptions="actionSend"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/gray1"
+            android:textColorHint="@color/gray1"
+            android:textSize="14sp"
+            />
+
+        <com.tongchuang.phonelive.custom.DrawableCheckBox
+            android:id="@+id/btn_face"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTint="@color/gray1"
+            android:paddingRight="10dp"
+            app:dt_right_drawable="@drawable/bg_chat_btn_face"
+            app:dt_right_height="26dp"
+            app:dt_right_width="26dp"
+            />
+    </LinearLayout>
+</FrameLayout>

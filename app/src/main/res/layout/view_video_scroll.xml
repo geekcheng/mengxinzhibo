@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <com.tongchuang.phonelive.custom.VideoLoadingBar
+        android:id="@+id/video_loading"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="47dp"
+        app:lb_bg_color="#80939393"
+        app:lb_fg_color="#b3ffffff"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutVideoScrollTip"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/bg_video_bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/input_tip"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_video_comment_input_2"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:text="@string/video_say_something"
+            android:textColor="#ccc"
+            android:textSize="14sp"
+            />
+
+        <ImageView
+            android:id="@+id/btn_face"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginRight="6dp"
+            android:padding="5dp"
+            android:src="@mipmap/icon_chat_face"
+            android:tint="@color/gray3"
+            />
+    </LinearLayout>
+</RelativeLayout>

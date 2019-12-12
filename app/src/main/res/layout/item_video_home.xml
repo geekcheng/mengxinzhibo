@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tongchuang.phonelive.custom.MyFrameLayout2
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:mfl_ratio="1.32"
+    >
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        />
+
+    <com.tongchuang.phonelive.custom.RatioImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:src="@mipmap/icon_video_home_bottom"
+        app:ri_ratio="0.48387"
+        />
+
+
+    <com.tongchuang.phonelive.custom.DrawableTextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:drawablePadding="4dp"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        app:dt_left_drawable="@mipmap/icon_main_video_num"
+        app:dt_left_height="14dp"
+        app:dt_left_width="14dp"
+        />
+
+</com.tongchuang.phonelive.custom.MyFrameLayout2>

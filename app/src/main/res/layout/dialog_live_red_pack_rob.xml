@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rob_group"
+        android:layout_width="260dp"
+        android:layout_height="330dp"
+        android:background="@mipmap/icon_red_pack_6">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:scaleType="centerCrop"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:id="@+id/rob_group_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/name"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:maxLength="20"
+                android:textColor="#FFE50D"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:id="@+id/btn_rob"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="35dp"
+                android:background="@mipmap/icon_red_pack_7">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/red_pack_13"
+                    android:textColor="@color/red"
+                    android:textSize="22sp" />
+
+            </FrameLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/result_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/name"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/btn_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="40dp"
+                android:text="@string/red_pack_14"
+                android:textColor="@color/global"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/wait_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/name"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:maxLength="20"
+                android:textColor="@color/global"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/count_down"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_red_pack_countdown"
+                android:gravity="center"
+                android:textColor="@color/global"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/count_down"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:text="@string/red_pack_21"
+                android:textColor="#80ffffff" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/win_group"
+        android:layout_width="260dp"
+        android:layout_height="405dp"
+        android:background="@mipmap/icon_red_pack_8"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/title_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="185dp"
+            android:text="@string/red_pack_15"
+            android:textColor="#FFE50D"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/win_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="@string/red_pack_16"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/win_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/win_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:drawableRight="@mipmap/icon_red_money"
+            android:drawablePadding="10dp"
+            android:text="335"
+            android:textColor="#FFE50D"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/btn_detail_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:text="@string/red_pack_14"
+            android:textColor="#FFE50D"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</FrameLayout>

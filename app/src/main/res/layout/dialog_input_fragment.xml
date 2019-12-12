@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        android:background="@color/gray2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_video_comment_input"
+            android:gravity="center_vertical"
+            android:hint="@string/video_say_something"
+            android:imeActionLabel="@string/send"
+            android:imeOptions="actionSend"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/gray1"
+            android:textColorHint="@color/gray1"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivCheck"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_chat_face" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutFace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray2"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="160dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/btn_send"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_guard_btn_buy"
+                android:gravity="center"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

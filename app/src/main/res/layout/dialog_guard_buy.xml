@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/guard_choose_duration"
+        android:textColor="@color/textColor3"
+        android:textSize="15sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <RadioGroup
+            android:id="@+id/rgType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/btn_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_guard_btn_1"
+                android:button="@null"
+                android:checked="true"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textColor="@color/fg_btn_buy_guard"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/btn_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_guard_btn_1"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textColor="@color/fg_btn_buy_guard"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/btn_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_guard_btn_1"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textColor="@color/fg_btn_buy_guard"
+                android:textSize="13sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="6dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/price_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@mipmap/icon_shouhu_money"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@mipmap/icon_shouhu_money"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_shouhu_money"
+                    android:textSize="13sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/price_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@mipmap/icon_shouhu_money"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_shouhu_money"
+                    android:textSize="13sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/guard_right"
+        android:textColor="@color/textColor3"
+        android:textSize="15sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+
+    <View style="@style/line2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/coin_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/textColor3"
+            android:textSize="14sp" />
+
+        <com.tongchuang.phonelive.custom.DrawableTextView
+            android:id="@+id/coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/coin_name"
+            android:drawablePadding="4dp"
+            android:textColor="#FFD304"
+            android:textSize="16sp"
+            app:dt_left_drawable="@mipmap/icon_live_gift_zs"
+            app:dt_left_height="14dp"
+            app:dt_left_width="14dp"
+            app:dt_right_height="14dp"
+            app:dt_right_width="14dp" />
+
+        <TextView
+            android:id="@+id/btn_buy"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_live_anchor_follow"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/guard_buy"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

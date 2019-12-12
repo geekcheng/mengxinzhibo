@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+    >
+
+    <com.tongchuang.phonelive.custom.SquareRoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        />
+
+    <com.tongchuang.phonelive.custom.MyRadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_radio_recommend"
+        android:button="@null"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatar"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/fans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/gray3"
+        android:textSize="14sp"
+        />
+
+
+</RelativeLayout>

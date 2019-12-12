@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.tongchuang.phonelive.custom.MyLinearLayout3
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_video_comment"
+        android:orientation="vertical"
+        app:mll_height_percent="0.65"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            >
+
+            <TextView
+                android:id="@+id/comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="11111评论"
+                android:textColor="@color/textColor2"
+                android:textSize="13sp"
+                />
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="10dp"
+                android:src="@mipmap/icon_live_ready_close"
+                android:tint="@color/gray1"
+                />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line2"
+            />
+
+        <com.tongchuang.phonelive.custom.RefreshView
+            android:id="@+id/refreshView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:enableLoadMore="true"
+            app:enableRefresh="false"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="top"
+            android:background="@color/gray2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/input"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_video_comment_input"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:text="@string/video_say_something"
+                android:textColor="@color/gray1"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:id="@+id/btn_face"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:button="@null"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/icon_chat_face"
+                android:tint="@color/gray1"
+                />
+        </LinearLayout>
+    </com.tongchuang.phonelive.custom.MyLinearLayout3>
+</FrameLayout>

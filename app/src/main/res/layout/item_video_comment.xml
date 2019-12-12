@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp"
+    >
+
+    <View
+        android:id="@+id/line"
+        style="@style/line2"
+        />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/avatar"
+        android:layout_toRightOf="@id/avatar"
+        android:textColor="@color/gray3"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginRight="60dp"
+        android:layout_toRightOf="@id/avatar"
+        android:textSize="14sp"
+        android:layout_marginBottom="5dp"
+        />
+
+    <com.tongchuang.phonelive.custom.DrawableTextView
+        android:id="@+id/btn_expand"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@id/content"
+        android:layout_below="@id/content"
+        android:drawablePadding="3dp"
+        android:gravity="center_vertical"
+        android:text="@string/video_comment_expand"
+        android:textColor="@color/gray3"
+        android:textSize="12sp"
+        app:dt_right_drawable="@mipmap/icon_comment_expand"
+        app:dt_right_height="16dp"
+        app:dt_right_width="16dp"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/btn_like"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-10dp"
+        android:padding="7dp"
+        />
+
+    <TextView
+        android:id="@+id/like_num"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/btn_like"
+        android:layout_alignRight="@id/btn_like"
+        android:layout_marginBottom="-3dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="12sp"
+        />
+
+</RelativeLayout>

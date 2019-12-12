@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fadingEdge="none"
+        app:elevation="0dp"
+        app:layout_behavior="com.tongchuang.phonelive.custom.FixAppBarLayoutBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <FrameLayout
+                android:id="@+id/top_container"
+                android:layout_width="match_parent"
+                android:layout_height="70dp" />
+
+            <View style="@style/line2" />
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.tongchuang.phonelive.custom.RefreshView
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:enableLoadMore="true"
+        app:layout="@layout/view_refresh_main_home"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

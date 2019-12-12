@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/black1"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/cut_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:padding="10dp"
+                android:src="@mipmap/icon_video_edit_special_cancel"
+                />
+
+
+            <TextView
+                android:id="@+id/tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/music_name"
+                android:layout_centerHorizontal="true"
+                android:text="@string/video_cut_tip"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                />
+
+            <FrameLayout
+                android:id="@+id/group_1"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_below="@id/tip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/icon_video_music_wave"
+                    />
+
+                <com.tongchuang.video.custom.RangeSlider
+                    android:id="@+id/range_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:leftThumbDrawable="@drawable/icon_video_music_edit_left"
+                    app:leftThumbIndex="0"
+                    app:lineColor="@color/global"
+                    app:lineHeight="2dp"
+                    app:rightThumbDrawable="@drawable/icon_video_music_edit_right"
+                    app:thumbWidth="10dp"
+                    app:tickCount="100"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/group_1"
+                android:layout_marginLeft="25dp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/group_1"
+                android:layout_marginRight="25dp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                />
+        </RelativeLayout>
+
+        <com.tongchuang.beauty.custom.TextSeekBar
+            android:id="@+id/btn_origin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:progressVal="80"
+            app:text2="@string/video_edit_origin"
+            />
+
+        <com.tongchuang.beauty.custom.TextSeekBar
+            android:id="@+id/seek_bgm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:progressVal="80"
+            app:text2="@string/music"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

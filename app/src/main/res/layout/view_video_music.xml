@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_video_comment"
+        >
+
+        <RelativeLayout
+            android:id="@+id/group_1"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            >
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/video_choose_music"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:src="@mipmap/icon_video_music_close"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/group_2"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_below="@id/group_1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_video_music_search"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:padding="8dp"
+                android:src="@mipmap/icon_live_search"
+                android:tint="@color/gray1"
+                />
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/video_search_music"
+                android:imeActionLabel="@string/search"
+                android:imeOptions="actionSearch"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="@color/gray1"
+                android:textColorHint="@color/gray1"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/music_class_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/group_2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:overScrollMode="never"
+            />
+
+        <View
+            android:id="@+id/line"
+            style="@style/line2"
+            android:layout_below="@id/music_class_recyclerView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/group_3"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_below="@id/line"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            >
+
+            <RadioButton
+                android:id="@+id/btn_hot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/video_music_hot"
+                android:textColor="@color/fg_btn_video_music"
+                android:textSize="14sp"
+                />
+
+            <RadioButton
+                android:id="@+id/btn_favorite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/video_music_favorite"
+                android:textColor="@color/fg_btn_video_music"
+                android:textSize="14sp"
+                />
+
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/container_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/group_3"
+            />
+
+        <FrameLayout
+            android:id="@+id/container_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/group_2"/>
+    </RelativeLayout>
+</FrameLayout>

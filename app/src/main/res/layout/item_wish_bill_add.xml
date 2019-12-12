@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutWishBillItem"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/bg_wish_bill_add_item">
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/wish_add_num"
+            android:textColor="#ff999999"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:src="@mipmap/icon_wish_bill_item_delete" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvNum"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true" />
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/bg_wish_bill_add"
+                android:scaleType="center"
+                android:src="@mipmap/icon_wish_bill_add" />
+
+            <TextView
+                android:id="@+id/tvWishBillNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivAvatar"
+                android:text="@string/wish_none_info"
+                android:textColor="@color/textColor3"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layoutWishBillAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivAvatar"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvAddName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="x"
+                    android:textColor="@color/textColor3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvAddCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/bg_wish_bill_add"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="11"
+                    android:textColor="#ff08d3ef"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivAvatar"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDoneName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/textColor3"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvDoneCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="0/30"
+                        android:textColor="#08D3EF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="200dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#92EEFB">
+
+                    <TextView
+                        android:id="@+id/tvProgress"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="#08D3EF" />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
