@@ -1,4 +1,4 @@
-# mengxinzhibo
+# 萌鑫达直播app源码
 使用Android Studio开发的一套直播app软件
 
 萌鑫直播源码app功能
